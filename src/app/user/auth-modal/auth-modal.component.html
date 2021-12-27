@@ -1,296 +1,248 @@
-<!-- Authentication modal -->
-<div id="modal" class="fixed inset-0 z-50 overflow-y-auto hidden">
-  <div
-    class="
-      flex
-      pt-4
-      px-4
-      pb-20
-      text-center
-      justify-center
-      items-end
-      min-h-screen
-      sm:block sm:p-0
-    "
-  >
-    <!-- Modal Background Overlay -->
-    <div class="fixed inset-0 transition-opacity">
-      <div class="absolute inset-0 opacity-75 bg-gray-800"></div>
+<app-modal>
+  <!-- Title -->
+  <p class="font-bold text-2xl" heading>My Account</p>
+  <!-- Tabs -->
+  <ul class="flex flex-wrap mb-4">
+    <li class="flex-auto text-center">
+      <a
+        href="#"
+        class="
+          block
+          rounded
+          transition
+          text-white
+          hover:text-white
+          py-3
+          px-4
+          bg-indigo-400
+        "
+        >Login</a
+      >
+    </li>
+    <li class="flex-auto text-center">
+      <a
+        href="#"
+        class="block rounded transition py-3 px-4 hover:text-indigo-400"
+        >Register</a
+      >
+    </li>
+  </ul>
+  <!-- Login Form -->
+  <form>
+    <!-- Email -->
+    <div class="mb-3">
+      <label class="inline-block mb-2">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        class="
+          block
+          rounded
+          w-full
+          py-1.5
+          px-3
+          text-gray-200
+          border border-gray-400
+          transition
+          duration-500
+          bg-transparent
+          focus:outline-none focus:border-indigo-400
+        "
+        placeholder="Enter your Email"
+      />
     </div>
-    <!-- Trick Browser into Centering Modal Contents -->
-    <span class="hidden sm:inline-block sm:align-middle sm:h-screen"
-      >&#8203;</span
-    >
-    <div
+    <!-- Password -->
+    <div class="mb-3">
+      <label class="inline-block mb-2">Password</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        class="
+          block
+          rounded
+          w-full
+          py-1.5
+          px-3
+          text-gray-200
+          border border-gray-400
+          transition
+          duration-500
+          bg-transparent
+          focus:outline-none focus:border-indigo-400
+        "
+        placeholder="Password"
+      />
+    </div>
+    <button
+      type="submit"
       class="
-        inline-block
-        bg-secondary
-        align-bottom
-        text-left
-        rounded-lg
-        overflow-hidden
-        shadow-xl
-        transform
-        transition-all
-        sm:my-8 sm:align-middle sm:max-w-lg sm:w-full
+        block
+        rounded
+        w-full
+        text-white
+        py-1.5
+        px-3
+        transition
+        bg-indigo-400
+        hover:bg-indigo-500
       "
     >
-      <!-- Add margin if want to see some overlay behind modal -->
-      <div class="text-left py-4 px-6">
-        <!-- Title -->
-        <div class="flex items-center justify-between pb-4">
-          <p class="font-bold text-2xl">My Account</p>
-          <!-- Modal Close Button -->
-          <div class="modal-close cursor-pointer z-50">&#x2715;</div>
-        </div>
-        <!-- Tabs -->
-        <ul class="flex flex-wrap mb-4">
-          <li class="flex-auto text-center">
-            <a
-              href="#"
-              class="
-                block
-                rounded
-                transition
-                text-white
-                hover:text-white
-                py-3
-                px-4
-                bg-indigo-400
-              "
-              >Login</a
-            >
-          </li>
-          <li class="flex-auto text-center">
-            <a
-              href="#"
-              class="block rounded transition py-3 px-4 hover:text-indigo-400"
-              >Register</a
-            >
-          </li>
-        </ul>
-        <!-- Login Form -->
-        <form>
-          <!-- Email -->
-          <div class="mb-3">
-            <label class="inline-block mb-2">E-mail</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              class="
-                block
-                rounded
-                w-full
-                py-1.5
-                px-3
-                text-gray-200
-                border border-gray-400
-                transition
-                duration-500
-                bg-transparent
-                focus:outline-none focus:border-indigo-400
-              "
-              placeholder="Enter your E-mail"
-            />
-          </div>
-          <!-- Password -->
-          <div class="mb-3">
-            <label class="inline-block mb-2">Password</label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              class="
-                block
-                rounded
-                w-full
-                py-1.5
-                px-3
-                text-gray-200
-                border border-gray-400
-                transition
-                duration-500
-                bg-transparent
-                focus:outline-none focus:border-indigo-400
-              "
-              placeholder="Password"
-            />
-          </div>
-          <button
-            type="submit"
-            class="
-              block
-              rounded
-              w-full
-              text-white
-              py-1.5
-              px-3
-              transition
-              bg-indigo-400
-              hover:bg-indigo-500
-            "
-          >
-            Submit
-          </button>
-        </form>
-        <!-- Registration Form -->
-        <form>
-          <!-- Name -->
-          <div class="mb-3">
-            <label class="inline-block mb-2">Name</label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              class="
-                block
-                rounded
-                w-full
-                py-1.5
-                px-3
-                text-gray-200
-                border border-gray-400
-                transition
-                duration-500
-                bg-transparent
-                focus:outline-none focus:border-indigo-400
-              "
-              placeholder="Enter Your Name"
-            />
-          </div>
-          <!-- Email -->
-          <div class="mb-3">
-            <label class="inline-block mb-2">E-Mail</label>
-            <input
-              type="email"
-              name="e-mail"
-              id="email"
-              class="
-                block
-                rounded
-                w-full
-                py-1.5
-                px-3
-                text-gray-200
-                border border-gray-400
-                transition
-                duration-500
-                bg-transparent
-                focus:outline-none focus:border-indigo-400
-              "
-              placeholder="Enter Email"
-            />
-          </div>
-          <!-- Age -->
-          <div class="mb-3">
-            <label class="inline-block mb-2">Age</label>
-            <input
-              type="number"
-              name="age"
-              id="age"
-              class="
-                block
-                rounded
-                w-full
-                py-1.5
-                px-3
-                text-gray-200
-                border border-gray-400
-                transition
-                duration-500
-                bg-transparent
-                focus:outline-none focus:border-indigo-400
-              "
-            />
-          </div>
-          <!-- Password -->
-          <div class="mb-3">
-            <label class="inline-block mb-2">Password</label>
-            <input
-              type="password"
-              name="pass"
-              id="password"
-              class="
-                block
-                rounded
-                w-full
-                py-1.5
-                px-3
-                text-gray-200
-                border border-gray-400
-                transition
-                duration-500
-                bg-transparent
-                focus:outline-none focus:border-indigo-400
-              "
-              placeholder="Enter a Password"
-            />
-          </div>
-          <!-- Confirm Password -->
-          <div class="mb-3">
-            <label class="inline-block mb-2">Confirm Password</label>
-            <input
-              type="password"
-              name="cpass"
-              id="password"
-              class="
-                block
-                rounded
-                w-full
-                py-1.5
-                px-3
-                text-gray-200
-                border border-gray-400
-                transition
-                duration-500
-                bg-transparent
-                focus:outline-none focus:border-indigo-400
-              "
-              placeholder="Confirm Password"
-            />
-          </div>
-          <!-- Phone Number -->
-          <div class="mb-3">
-            <label class="inline-block mb-2">Phone Number</label>
-            <input
-              type="text"
-              name="phone"
-              id="phone"
-              class="
-                block
-                rounded
-                w-full
-                py-1.5
-                px-3
-                text-gray-200
-                border border-gray-400
-                transition
-                duration-500
-                bg-transparent
-                focus:outline-none focus:border-indigo-400
-              "
-              placeholder="Enter your Phone Number"
-            />
-          </div>
-          <button
-            type="submit"
-            class="
-              block
-              rounded
-              w-full
-              transition
-              py-1.5
-              px-3
-              text-white
-              bg-indigo-400
-              hover:bg-indigo-500
-            "
-          >
-            Submit
-          </button>
-        </form>
-      </div>
+      Submit
+    </button>
+  </form>
+  <!-- Registration Form -->
+  <form>
+    <!-- Name -->
+    <div class="mb-3">
+      <label class="inline-block mb-2">Name</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        class="
+          block
+          rounded
+          w-full
+          py-1.5
+          px-3
+          text-gray-200
+          border border-gray-400
+          transition
+          duration-500
+          bg-transparent
+          focus:outline-none focus:border-indigo-400
+        "
+        placeholder="Enter Your Name"
+      />
     </div>
-  </div>
-</div>
+    <!-- Email -->
+    <div class="mb-3">
+      <label class="inline-block mb-2">Email</label>
+      <input
+        type="email"
+        name="e-mail"
+        class="
+          block
+          rounded
+          w-full
+          py-1.5
+          px-3
+          text-gray-200
+          border border-gray-400
+          transition
+          duration-500
+          bg-transparent
+          focus:outline-none focus:border-indigo-400
+        "
+        placeholder="Enter Email"
+      />
+    </div>
+    <!-- Age -->
+    <div class="mb-3">
+      <label class="inline-block mb-2">Age</label>
+      <input
+        type="number"
+        name="age"
+        id="age"
+        class="
+          block
+          rounded
+          w-full
+          py-1.5
+          px-3
+          text-gray-200
+          border border-gray-400
+          transition
+          duration-500
+          bg-transparent
+          focus:outline-none focus:border-indigo-400
+        "
+      />
+    </div>
+    <!-- Password -->
+    <div class="mb-3">
+      <label class="inline-block mb-2">Password</label>
+      <input
+        type="password"
+        name="pass"
+        class="
+          block
+          rounded
+          w-full
+          py-1.5
+          px-3
+          text-gray-200
+          border border-gray-400
+          transition
+          duration-500
+          bg-transparent
+          focus:outline-none focus:border-indigo-400
+        "
+        placeholder="Enter a Password"
+      />
+    </div>
+    <!-- Confirm Password -->
+    <div class="mb-3">
+      <label class="inline-block mb-2">Confirm Password</label>
+      <input
+        type="password"
+        name="cpass"
+        class="
+          block
+          rounded
+          w-full
+          py-1.5
+          px-3
+          text-gray-200
+          border border-gray-400
+          transition
+          duration-500
+          bg-transparent
+          focus:outline-none focus:border-indigo-400
+        "
+        placeholder="Confirm Password"
+      />
+    </div>
+    <!-- Phone Number -->
+    <div class="mb-3">
+      <label class="inline-block mb-2">Phone Number</label>
+      <input
+        type="text"
+        name="phone"
+        id="phone"
+        class="
+          block
+          rounded
+          w-full
+          py-1.5
+          px-3
+          text-gray-200
+          border border-gray-400
+          transition
+          duration-500
+          bg-transparent
+          focus:outline-none focus:border-indigo-400
+        "
+        placeholder="Enter your Phone Number"
+      />
+    </div>
+    <button
+      type="submit"
+      class="
+        block
+        rounded
+        w-full
+        transition
+        py-1.5
+        px-3
+        text-white
+        bg-indigo-400
+        hover:bg-indigo-500
+      "
+    >
+      Submit
+    </button>
+  </form>
+</app-modal>
